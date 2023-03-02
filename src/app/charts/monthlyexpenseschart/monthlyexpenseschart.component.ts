@@ -28,6 +28,7 @@ export class MonthlyexpenseschartComponent {
         }]
       },
       options: {
+        maintainAspectRatio: false,
         scales: {
           y: {
             beginAtZero: true
