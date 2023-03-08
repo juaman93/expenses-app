@@ -36,7 +36,9 @@ export class MonthlyexpenseschartComponent {
           {
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
-            borderWidth: 1
+            backgroundColor: ['rgb(64,84,180)'],
+            borderColor: ['rgb(64,84,180)'],
+            borderWidth: 2
           }
         ]
       },
