@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Chart,registerables } from 'chart.js';
-Chart.register(...registerables);
+import { Component } from '@angular/core'
+import { Chart, registerables } from 'chart.js'
+Chart.register(...registerables)
 
 @Component({
   selector: 'app-monthlyexpenseschart',
@@ -8,24 +8,37 @@ Chart.register(...registerables);
   styleUrls: ['./monthlyexpenseschart.component.scss']
 })
 export class MonthlyexpenseschartComponent {
-
   constructor() {}
 
-  ngOnInit(): void{
-    this.RenderChart();
+  ngOnInit(): void {
+    this.RenderChart()
   }
 
-  RenderChart(){
-
-    new Chart("piechart", {
-      type: 'bar',
+  RenderChart() {
+    new Chart('monthlyexpenseschart', {
+      type: 'line',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
+        labels: [
+          'Jan',
+          'Feb',
+          'Mar',
+          'Apr',
+          'May',
+          'Jun',
+          'Jul',
+          'Aug',
+          'Sep',
+          'Oct',
+          'Nov',
+          'Dec'
+        ],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
+            borderWidth: 1
+          }
+        ]
       },
       options: {
         maintainAspectRatio: false,
@@ -35,8 +48,6 @@ export class MonthlyexpenseschartComponent {
           }
         }
       }
-    });
-
-    
+    })
   }
 }
