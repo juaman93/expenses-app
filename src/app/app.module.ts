@@ -21,6 +21,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TableComponent } from './table/table.component';
 import { MonthlyexpensesComponent } from './monthlyexpenses/monthlyexpenses.component';
 import { MonthlyexpenseschartComponent } from './charts/monthlyexpenseschart/monthlyexpenseschart.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { NewExpenseComponent } from './components/new-expense/new-expense.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { MonthlyexpenseschartComponent } from './charts/monthlyexpenseschart/mon
     DashboardComponent,
     TableComponent,
     MonthlyexpensesComponent,
-    MonthlyexpenseschartComponent
+    MonthlyexpenseschartComponent,
+    NewExpenseComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import { MonthlyexpenseschartComponent } from './charts/monthlyexpenseschart/mon
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
