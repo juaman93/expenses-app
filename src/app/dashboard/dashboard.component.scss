@@ -4,16 +4,10 @@
 
 .dashboard-card {
   position: absolute;
-  top: 15px;
+  top: 10px;
   left: 15px;
   right: 15px;
-  bottom: 15px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  bottom: 10px;
 }
 
 .dashboard-card-content {
@@ -26,5 +20,10 @@
 }
 
 .mat-mdc-card-header {
-  margin-bottom: -11px;
+  margin-bottom: -5px;
+}
+
+.mat-mdc-card-content {
+  display: block;
+  padding: 0px 0px;
 }
