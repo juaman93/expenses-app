@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
+import { FormControl, FormGroup } from '@angular/forms'
 import { ExpensesService } from 'src/app/services/expenses.service'
-import { CurrencyPipe } from '@angular/common'
 
 @Component({
   selector: 'app-new-expense',
@@ -11,10 +10,7 @@ import { CurrencyPipe } from '@angular/common'
 export class NewExpenseComponent implements OnInit {
   form: FormGroup
 
-  constructor(
-    private expensesService: ExpensesService,
-    private currencyPipe: CurrencyPipe
-  ) {
+  constructor(private expensesService: ExpensesService) {
     this.form = new FormGroup({
       description: new FormControl(),
       amount: new FormControl(),
