@@ -11,7 +11,7 @@ export class NewExpenseComponent implements OnInit {
   form: FormGroup
 
   constructor(private expensesService: ExpensesService) {
-    const id = Math.floor(Math.random() * 1000) + 1 // Generate a random number between 1 and 1000 as the id
+    const id = Math.floor(Math.random() * 1000000) + Date.now().toString() // Generate a unique id
     this.form = new FormGroup({
       id: new FormControl(id),
       description: new FormControl(),
