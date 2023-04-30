@@ -11,12 +11,13 @@ export class NewExpenseComponent implements OnInit {
   form: FormGroup
 
   constructor(private expensesService: ExpensesService) {
+    const id = Math.floor(Math.random() * 1000) + 1 // Generate a random number between 1 and 1000 as the id
     this.form = new FormGroup({
-      id: new FormControl(),
+      id: new FormControl(id),
       description: new FormControl(),
       amount: new FormControl(),
       category: new FormControl(),
-      date: new FormControl()
+      date: new FormControl(new Date().toISOString().substring(0, 10)) // Set the date to today's date
     })
   }
 
