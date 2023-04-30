@@ -12,6 +12,7 @@ export class NewExpenseComponent implements OnInit {
 
   constructor(private expensesService: ExpensesService) {
     this.form = new FormGroup({
+      id: new FormControl(),
       description: new FormControl(),
       amount: new FormControl(),
       category: new FormControl(),
