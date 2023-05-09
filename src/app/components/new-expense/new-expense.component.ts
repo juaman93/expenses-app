@@ -44,8 +44,20 @@ export class NewExpenseComponent implements OnInit {
   ngOnInit() {}
 
   async onSubmit() {
+    // Remove any non-digit characters from the amount field value
+    const amount = this.form.value.amount.replace(/[^0-9\.]+/g, '')
+
+    // Set the stripped amount value back to the form control
+    this.form.patchValue({ amount })
+
     console.log(this.form.value)
     const response = await this.expensesService.addExpense(this.form.value)
     console.log(response)
+
+    // Reset the form to its initial state after successful submission
+    this.form.reset({
+      id: Math.floor(Math.random() * 1000000) + Date.now().toString(),
+      date: new Date().toISOString().substring(0, 10)
+    })
   }
 }
