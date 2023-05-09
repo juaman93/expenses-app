@@ -60,4 +60,8 @@ export class NewExpenseComponent implements OnInit {
       date: new Date().toISOString().substring(0, 10)
     })
   }
+
+  onReset() {
+    this.form.reset()
+  }
 }
