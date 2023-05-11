@@ -18,14 +18,13 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatCardModule } from '@angular/material/card'
 import { MatMenuModule } from '@angular/material/menu'
-import { TableComponent } from './table/table.component'
 import { MonthlyexpensesComponent } from './monthlyexpenses/monthlyexpenses.component'
 import { MonthlyexpenseschartComponent } from './charts/monthlyexpenseschart/monthlyexpenseschart.component'
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app'
 import { environment } from '../environments/environment'
 import { provideFirestore, getFirestore } from '@angular/fire/firestore'
 import { NewExpenseComponent } from './components/new-expense/new-expense.component'
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'
 import { ExpenseListComponent } from './components/expense-list/expense-list.component'
 
 @NgModule({
@@ -35,7 +34,6 @@ import { ExpenseListComponent } from './components/expense-list/expense-list.com
     ExpensesDBComponent,
     ErrorComponent,
     DashboardComponent,
-    TableComponent,
     MonthlyexpensesComponent,
     MonthlyexpenseschartComponent,
     NewExpenseComponent,
