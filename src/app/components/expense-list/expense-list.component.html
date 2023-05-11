@@ -1,16 +1,32 @@
-<div class="expenses">
-  <div class="expense" *ngFor="let expense of expenses">
-    <div
-      class="id"
-      [ngStyle]="{ backgroundImage: 'url(' + expense.id + ')' }"
-    ></div>
-    <div class="info">
-      <h4>{{ expense.description }}</h4>
-      <p>{{ expense.amount }}</p>
-      <p>Coordenadas: {{ expense.category }} / {{ expense.date }}</p>
-      <button class="btn btn-outline-danger" (click)="onClickDelete(expense)">
-        Borrar
-      </button>
-    </div>
-  </div>
-</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  -->
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- description Column -->
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Description</th>
+    <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+  </ng-container>
+
+  <!-- amount Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef>Amount</th>
+    <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+  </ng-container>
+
+  <!-- category Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef>Category</th>
+    <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+  </ng-container>
+
+  <!-- date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef>Date</th>
+    <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
