@@ -25,7 +25,8 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app'
 import { environment } from '../environments/environment'
 import { provideFirestore, getFirestore } from '@angular/fire/firestore'
 import { NewExpenseComponent } from './components/new-expense/new-expense.component'
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { ExpenseListComponent } from './components/expense-list/expense-list.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms'
     TableComponent,
     MonthlyexpensesComponent,
     MonthlyexpenseschartComponent,
-    NewExpenseComponent
+    NewExpenseComponent,
+    ExpenseListComponent
   ],
   imports: [
     BrowserModule,

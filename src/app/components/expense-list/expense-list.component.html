@@ -1,0 +1,16 @@
+<div class="expenses">
+  <div class="expense" *ngFor="let expense of expenses">
+    <div
+      class="id"
+      [ngStyle]="{ backgroundImage: 'url(' + expense.id + ')' }"
+    ></div>
+    <div class="info">
+      <h4>{{ expense.description }}</h4>
+      <p>{{ expense.amount }}</p>
+      <p>Coordenadas: {{ expense.category }} / {{ expense.date }}</p>
+      <button class="btn btn-outline-danger" (click)="onClickDelete(expense)">
+        Borrar
+      </button>
+    </div>
+  </div>
+</div>
