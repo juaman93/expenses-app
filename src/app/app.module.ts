@@ -12,7 +12,6 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list'
-import { ExpensesDBComponent } from './expensesdb/expensesdb.component'
 import { ErrorComponent } from './error/error.component'
 import { DashboardComponent } from './dashboard/dashboard.component'
 import { MatGridListModule } from '@angular/material/grid-list'
@@ -31,7 +30,6 @@ import { NgChartsModule } from 'ng2-charts'
   declarations: [
     AppComponent,
     AppNavigationComponent,
-    ExpensesDBComponent,
     ErrorComponent,
     DashboardComponent,
     MonthlyexpenseschartComponent,
