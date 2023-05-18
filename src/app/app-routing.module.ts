@@ -13,13 +13,14 @@ const routes: Routes = [
         component: DashboardComponent
       },
       {
-        path: '404',
-        component: ErrorComponent
-      },
-      {
         path: 'expensesdb',
         component: ExpensesDBComponent
       },
+      {
+        path: '404',
+        component: ErrorComponent
+      },
+
       {
         path: '**',
         redirectTo: '404'
