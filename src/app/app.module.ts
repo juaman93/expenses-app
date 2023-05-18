@@ -25,16 +25,18 @@ import { NewExpenseComponent } from './components/new-expense/new-expense.compon
 import { ReactiveFormsModule } from '@angular/forms'
 import { ExpenseListComponent } from './components/expense-list/expense-list.component'
 import { NgChartsModule } from 'ng2-charts'
+import { ExpensesDBComponent } from './expensesdb/expensesdb.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavigationComponent,
-    ErrorComponent,
     DashboardComponent,
+    ErrorComponent,
+    ExpensesDBComponent,
+    ExpenseListComponent,
     MonthlyexpenseschartComponent,
-    NewExpenseComponent,
-    ExpenseListComponent
+    NewExpenseComponent
   ],
   imports: [
     BrowserModule,

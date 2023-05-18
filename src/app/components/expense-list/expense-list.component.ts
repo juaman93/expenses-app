@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core'
+import { Component } from '@angular/core'
 import { ExpensesService } from 'src/app/services/expenses.service'
 import { DataSource } from '@angular/cdk/collections'
 
