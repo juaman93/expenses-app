@@ -18,7 +18,6 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatCardModule } from '@angular/material/card'
 import { MatMenuModule } from '@angular/material/menu'
-import { MonthlyexpensesComponent } from './monthlyexpenses/monthlyexpenses.component'
 import { MonthlyexpenseschartComponent } from './charts/monthlyexpenseschart/monthlyexpenseschart.component'
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app'
 import { environment } from '../environments/environment'
@@ -35,7 +34,6 @@ import { NgChartsModule } from 'ng2-charts'
     ExpensesDBComponent,
     ErrorComponent,
     DashboardComponent,
-    MonthlyexpensesComponent,
     MonthlyexpenseschartComponent,
     NewExpenseComponent,
     ExpenseListComponent
