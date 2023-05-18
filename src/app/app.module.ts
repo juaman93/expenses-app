@@ -26,6 +26,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore'
 import { NewExpenseComponent } from './components/new-expense/new-expense.component'
 import { ReactiveFormsModule } from '@angular/forms'
 import { ExpenseListComponent } from './components/expense-list/expense-list.component'
+import { NgChartsModule } from 'ng2-charts'
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ExpenseListComponent } from './components/expense-list/expense-list.com
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    NgChartsModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
